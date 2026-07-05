@@ -7,7 +7,7 @@
 
 .clusterButton {
   border: none;
-  background: #f1f5f9;
+  background: var(--color-bg);
   color: #475569;
   padding: 0.75rem 1.2rem;
   border-radius: 999px;
@@ -18,11 +18,11 @@
 }
 
 .clusterButton:hover {
-  background: #22c55e;
+  background: var(--color-primary);
   color: white;
 }
 
 .active {
-  background: #22c55e;
+  background: var(--color-primary);
   color: white;
 }

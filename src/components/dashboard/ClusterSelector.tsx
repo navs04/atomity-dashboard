@@ -1,3 +1,4 @@
+import {motion} from "framer-motion";
 import { clusters } from "../../data/dashboardData";
 import styles from "./ClusterSelector.module.css";
 
@@ -13,12 +14,14 @@ function ClusterSelector({
     return (
         <div className={styles.selector}>
            {clusters.map((cluster)=>(
-            <button
+            <motion.button
+            whileHover={{scale: 1.05}}
+            whileTap={{scale: 0.97}}
             key={cluster.id}
             className={`${styles.clusterButton} ${selectedCluster === cluster.id? styles.active : "" }`}
             onClick={() => setSelectedCluster(cluster.id)}>
                 {cluster.name}
-            </button>
+            </motion.button>
            ))}
         </div>
     );
