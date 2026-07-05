@@ -1,10 +1,16 @@
+import { clusters } from "../../data/dashboardData";
+import styles from "./ClusterSelector.module.css";
+
 function ClusterSelector(){
     return (
-        <div>
-            <button>Cluster A</button>
-            <button>Cluster B</button>
-            <button>Cluster C</button>
-            <button>Cluster D</button>
+        <div className={styles.selector}>
+           {clusters.map((cluster)=>(
+            <button
+            key={cluster.id}
+            className={`${styles.clusterButton} ${cluster.name === "Production"? styles.active : "" }`}>
+                {cluster.name}
+            </button>
+           ))}
         </div>
     );
 }

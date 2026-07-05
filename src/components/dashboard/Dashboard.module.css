@@ -1,0 +1,21 @@
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f6f8fb;
+}
+
+.card{
+    width: min(100%, 1100px);
+    min-height: 700px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 2rem;
+
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}

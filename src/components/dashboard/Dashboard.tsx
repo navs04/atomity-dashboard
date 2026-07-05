@@ -1,15 +1,14 @@
 import Header from "./Header";
 import ClusterSelector from "./ClusterSelector";
-import BarChart from "./BarChart";
-import MetricsTable from "./MetricsTable";
+import styles from "./Dashboard.module.css";
 
 function Dashboard(){
     return (
-        <section className="dashboard">
-            <Header />
-            <ClusterSelector />
-            <BarChart />
-            <MetricsTable />
+        <section className={styles.wrapper}>
+            <div className={styles.card}>
+                <Header />
+                <ClusterSelector />
+            </div>
         </section>
     );
 }
